@@ -1,15 +1,15 @@
 ---
+import Layout from "../Layouts/Layout.astro";
+import Hero from "../components/frontend/Hero.jsx";
+import Mission from "../components/frontend/Mission";
+import { info } from "../data/info.js";
+import { services } from "../data/services.js";
+import List from "../components/frontend/List.jsx";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Hero />
+  <List items={services} />
+  <List items={services} />
+  <Mission mission={info.mission} />
+</Layout>

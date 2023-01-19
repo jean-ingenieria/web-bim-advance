@@ -1,0 +1,11 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import List from "../components/frontend/List.jsx";
+import TeamHero from "../components/frontend/TeamHero";
+import { teams } from "../data/team.js";
+---
+
+<Layout>
+  <TeamHero />
+  <List items={teams} />
+</Layout>
